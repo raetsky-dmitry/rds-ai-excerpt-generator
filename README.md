@@ -1,4 +1,4 @@
-# === RDS AI Генератор Анонсов ===
+# RDS AI Excerpt Generator
 
 Авторы: RD-Studio  
 Ссылка для пожертвований: https://rd-studio.com  
