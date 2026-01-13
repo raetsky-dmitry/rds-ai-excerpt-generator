@@ -1,0 +1,206 @@
+/* Editor styles for both Gutenberg and Classic Editor */
+.rds-ai-excerpt-widget {
+  padding: 12px;
+}
+
+.rds-ai-excerpt-widget .components-panel__body {
+  border-top: 1px solid #e0e0e0;
+}
+
+.rds-ai-excerpt-widget .components-base-control {
+  margin-bottom: 16px;
+}
+
+.rds-ai-excerpt-widget .components-base-control__label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.rds-ai-excerpt-widget .components-select-control__input,
+.rds-ai-excerpt-widget .components-text-control__input,
+.rds-ai-excerpt-widget input[type="number"],
+.rds-ai-excerpt-widget input[type="text"] {
+  width: 100%;
+}
+
+.rds-ai-excerpt-widget .components-button {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.rds-ai-excerpt-widget .generating-indicator {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: #f0f6fc;
+  border: 1px solid #c5d9f1;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+.rds-ai-excerpt-widget .generating-indicator .spinner {
+  float: none;
+  margin: 0 8px 0 0;
+}
+
+.rds-ai-excerpt-widget .result-area {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.rds-ai-excerpt-widget .result-area textarea {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 12px;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.rds-ai-excerpt-widget .result-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rds-ai-excerpt-widget .error-message {
+  padding: 12px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+  margin: 16px 0;
+}
+
+.rds-ai-excerpt-widget .success-message {
+  padding: 12px;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  color: #155724;
+  margin: 16px 0;
+}
+
+/* Classic Editor specific styles */
+#rds-ai-excerpt-generator {
+  background: #fff;
+}
+
+#rds-ai-excerpt-generator .inside {
+  margin: 0;
+  padding: 0;
+}
+
+#rds-ai-excerpt-classic-widget {
+  padding: 12px;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-loading {
+  padding: 12px;
+  background: #f0f6fc;
+  border: 1px solid #c5d9f1;
+  margin-bottom: 16px;
+  display: none;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-loading p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#rds-ai-excerpt-classic-widget .spinner {
+  float: none;
+  margin: 0 8px 0 0;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-error {
+  padding: 12px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 16px;
+  display: none;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-error p {
+  margin: 0;
+  color: #721c24;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-params p {
+  margin: 0 0 16px 0;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-params label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-params select,
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-params input {
+  width: 100%;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-actions {
+  margin: 16px 0;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-result {
+  display: none;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-result h4 {
+  margin: 0 0 8px 0;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-result textarea {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 12px;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-result-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+  .rds-ai-excerpt-widget .result-actions,
+  #rds-ai-excerpt-classic-widget .rds-ai-excerpt-result-actions {
+    flex-direction: column;
+  }
+
+  .rds-ai-excerpt-widget .components-button,
+  #rds-ai-excerpt-classic-widget button {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Add to editor.css */
+#rds-ai-excerpt-classic-widget .spinner {
+  float: none;
+  margin: 0 8px 0 0;
+  visibility: visible;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-loading {
+  padding: 12px;
+  background: #f0f6fc;
+  border: 1px solid #c5d9f1;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+#rds-ai-excerpt-classic-widget .rds-ai-excerpt-loading p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}

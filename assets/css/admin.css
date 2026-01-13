@@ -1,0 +1,78 @@
+/* Admin settings page styles */
+.rds-ai-excerpt-settings {
+  max-width: 800px;
+}
+
+.rds-ai-excerpt-settings .form-table th {
+  width: 200px;
+}
+
+.rds-ai-excerpt-settings textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
+.rds-ai-excerpt-settings .widefat {
+  width: 100%;
+}
+
+.rds-ai-excerpt-settings .checkbox-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+.rds-ai-excerpt-settings .checkbox-list label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.rds-ai-excerpt-settings .checkbox-list input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.rds-ai-excerpt-settings .api-test-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-left: 4px solid #2271b1;
+}
+
+.rds-ai-excerpt-settings .api-test-section button {
+  margin-top: 10px;
+}
+
+.rds-ai-excerpt-settings .api-test-result {
+  margin-top: 10px;
+  padding: 10px;
+  display: none;
+}
+
+.rds-ai-excerpt-settings .api-test-result.success {
+  background: #d1f7c4;
+  border: 1px solid #46b450;
+  color: #0c5460;
+}
+
+.rds-ai-excerpt-settings .api-test-result.error {
+  background: #f8d7da;
+  border: 1px solid #dc3545;
+  color: #721c24;
+}
+
+.rds-ai-excerpt-debug-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.rds-ai-excerpt-debug-section h2 {
+  margin-top: 0;
+}
+
+.rds-ai-excerpt-debug-section .dashicons-warning {
+  color: #d63638;
+}
