@@ -1,103 +1,108 @@
-=== RDS AI Excerpt Generator ===
-Contributors: yourusername
-Donate link: https://yourwebsite.com
-Tags: excerpt, ai, openai, automatic, content, generation
-Requires at least: 6.0
-Tested up to: 6.4
-Requires PHP: 7.4
-Stable tag: 1.0.0
-License: GPL v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# === RDS AI Генератор Анонсов ===
 
-Automatically generate post excerpts using AI based on post content.
+Авторы: RD-Studio  
+Ссылка для пожертвований: https://rd-studio.com  
+Теги: анонс, искусственный интеллект, openai, автоматический, контент, генерация  
+Требуется WordPress не ниже: 6.0  
+Протестировано до версии: 6.4  
+Требуется PHP: 7.4  
+Стабильная версия: 1.0.0  
+Лицензия: GPL v2 или более поздняя  
+Ссылка на лицензию: https://www.gnu.org/licenses/gpl-2.0.html
 
-== Description ==
+Автоматически генерируйте анонсы записей с помощью искусственного интеллекта на основе содержания записи.
 
-RDS AI Excerpt Generator is a WordPress plugin that uses artificial intelligence to automatically generate engaging and relevant excerpts for your posts.
+---
 
-= Key Features =
+**⚠️ ВАЖНО:** Для корректной работы плагина требуется установить и активировать плагин **RDS AI Engine**.
+Скачать можно здесь: https://github.com/raetsky-dmitry/rds-ai-engine1
 
-- **AI-Powered Excerpt Generation**: Uses OpenAI-compatible APIs to generate excerpts
-- **Multiple Styles**: Choose from descriptive, advertising, business, or creative styles
-- **Customizable Tone**: Set the tone (formal, friendly, neutral, professional)
-- **Multilingual Support**: Generate excerpts in multiple languages
-- **Focus Keywords**: Specify keywords to focus on in the excerpt
-- **Gutenberg & Classic Editor Support**: Works with both WordPress editors
-- **Secure API Handling**: All API calls are made server-side
-- **Role-Based Access Control**: Control which user roles can use the plugin
-- **Debug Logging**: Optional logging for troubleshooting
+---
 
-= How It Works =
+## == Описание ==
 
-1. Install and activate the plugin
-2. Configure your AI API settings (OpenAI or compatible)
-3. Edit any post and find the "AI Excerpt Generator" panel in the sidebar
-4. Adjust generation parameters (style, tone, language, etc.)
-5. Click "Generate Excerpt" to create an AI-powered excerpt
-6. Review and apply the generated excerpt to your post
+RDS AI Генератор Анонсов — это плагин для WordPress, который использует искусственный интеллект для автоматического создания привлекательных и релевантных анонсов к вашим записям.
 
-= Requirements =
+## = Основные возможности =
 
-- WordPress 6.0 or higher
-- PHP 7.4 or higher
-- An OpenAI API key or compatible AI API
+- **Генерация анонсов на базе ИИ**: Использует OpenAI-совместимые API для генерации анонсов
+- **Несколько стилей**: Выбор из описательного, рекламного, делового или креативного стилей
+- **Настраиваемый тон**: Установка тона (формальный, дружелюбный, нейтральный, профессиональный)
+- **Поддержка нескольких языков**: Генерация анонсов на разных языках
+- **Ключевые слова**: Указание ключевых слов, на которые должен ориентироваться анонс
+- **Поддержка Gutenberg и классического редактора**: Работает с обоими редакторами WordPress
+- **Безопасная обработка API**: Все запросы к API выполняются на стороне сервера
+- **Контроль доступа на основе ролей**: Управление тем, какие роли пользователей могут использовать плагин
+- **Журнал отладки**: Опциональное ведение логов для диагностики проблем
 
-= Privacy & Security =
+## = Как это работает =
 
-- All API keys are stored securely in your WordPress database
-- API calls are made server-side (keys are never exposed to browsers)
-- You control which data is sent to the AI service
+1. Установите и активируйте плагин
+2. Настройте параметры AI API (OpenAI или совместимый)  
+   **Не забудьте предварительно установить RDS AI Engine!**
+3. Отредактируйте любую запись и найдите панель «AI Excerpt Generator» в боковой колонке
+4. Настройте параметры генерации (стиль, тон, язык и т.д.)
+5. Нажмите «Сгенерировать анонс», чтобы создать анонс с помощью ИИ
+6. Просмотрите и примените сгенерированный анонс к вашей записи
 
-== Installation ==
+## = Требования =
 
-1. Upload the `rds-ai-excerpt-generator` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to Settings > AI Excerpt to configure your API settings
-4. Start generating excerpts in the post editor!
+- WordPress 6.0 или выше
+- PHP 7.4 или выше
+- Ключ API OpenAI или совместимый AI API
+- **Обязательно:** Установленный и активированный плагин **RDS AI Engine**
 
-== Frequently Asked Questions ==
+## = Конфиденциальность и безопасность =
 
-= What AI services are supported? =
+- Все ключи API хранятся безопасно в базе данных WordPress
+- Запросы к API выполняются на стороне сервера (ключи никогда не передаются в браузер)
+- Вы контролируете, какие данные отправляются в AI-сервис
 
-The plugin supports any OpenAI-compatible API. This includes:
+## == Установка ==
 
-- OpenAI's official API
+1. Загрузите папку `rds-ai-excerpt-generator` в директорию `/wp-content/plugins/`
+2. Активируйте плагин через меню «Плагины» в WordPress
+3. **Установите и активируйте обязательный плагин RDS AI Engine**
+4. Перейдите в AI Excerpt, чтобы настроить параметры запроса
+5. Начните генерировать анонсы в редакторе записей!
+
+## == Часто задаваемые вопросы ==
+
+### = Какие AI-сервисы поддерживаются? =
+
+Плагин поддерживает любой OpenAI-совместимый API. В том числе:
+
+- Официальный API OpenAI
+- OpenRouter API
 - Azure OpenAI Service
-- Local AI servers with OpenAI-compatible endpoints
-- Other compatible AI providers
+- Локальные AI-серверы с OpenAI-совместимыми конечными точками
+- Другие совместимые AI-провайдеры
 
-= Is my API key secure? =
+### = Мой ключ API в безопасности? =
 
-Yes! All API calls are made from your server. Your API key is never exposed to the browser or sent to client-side JavaScript.
+Да! Все вызовы API выполняются с вашего сервера. Ваш ключ API никогда не передаётся в браузер и не отправляется в клиентский JavaScript.
 
-= Can I use this with other post types? =
+### = Можно ли использовать это с другими типами записей? =
 
-Yes! By default, it works with posts, but you can enable it for any public post type in the settings.
+Да! По умолчанию плагин работает с записями (posts), но вы можете включить его для любого публичного типа записей в настройках.
 
-= How much does it cost? =
+### = Сколько это стоит? =
 
-The plugin itself is free. You only pay for API usage with your AI provider (OpenAI, etc.).
+Сам плагин бесплатный. Вы платите только за использование API у вашего AI-провайдера (OpenAI и др.).
 
-== Screenshots ==
-
-1. Settings page for configuring API and defaults
-2. AI Excerpt Generator panel in Gutenberg editor
-3. Generated excerpt preview with apply/copy options
-4. Classic editor meta box with generation parameters
-
-== Changelog ==
+## == История изменений ==
 
 = 1.0.0 =
 
-- Initial release
-- Support for Gutenberg and Classic editors
-- Configurable AI API settings
-- Multiple generation styles and tones
-- Multilingual support
-- Role-based access control
-- Debug logging
+- Первый выпуск
+- Поддержка редакторов Gutenberg и Classic
+- Настраиваемые параметры AI API
+- Несколько стилей и тонов генерации
+- Поддержка нескольких языков
+- Контроль доступа на основе ролей
+- Журнал отладки
 
-== Upgrade Notice ==
+### == Уведомление об обновлении ==
 
 = 1.0.0 =
-Initial release. No upgrade required.
+Первый выпуск. Обновление не требуется.
