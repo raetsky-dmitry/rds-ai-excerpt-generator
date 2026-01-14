@@ -1,0 +1,702 @@
+# Russian translation for RDS AI Excerpt Generator
+# Copyright (C) 2024 Your Name
+# This file is distributed under the same license as the RDS AI Excerpt Generator plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: RDS AI Excerpt Generator 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-14 12:00+0000\n"
+"PO-Revision-Date: 2024-01-14 12:00+0000\n"
+"Last-Translator: AI Assistant\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0\n"
+"X-Domain: rds-ai-excerpt\n"
+
+#: rds-ai-excerpt-generator.php:16
+msgid "RDS AI Excerpt Generator"
+msgstr "RDS AI Генератор Отрывков"
+
+#: rds-ai-excerpt-generator.php:17
+msgid "Automatically generate post excerpts using AI based on post content. Requires RDS AI Engine plugin."
+msgstr "Автоматически генерирует отрывки постов с помощью ИИ на основе содержимого. Требуется плагин RDS AI Engine."
+
+#: rds-ai-excerpt-generator.php:78
+msgid "RDS AI Excerpt Generator:"
+msgstr "RDS AI Генератор Отрывков:"
+
+#: rds-ai-excerpt-generator.php:80
+msgid "This plugin requires RDS AI Engine to be installed and activated."
+msgstr "Для работы этого плагина требуется установить и активировать RDS AI Engine."
+
+#: rds-ai-excerpt-generator.php:82
+msgid "Install RDS AI Engine"
+msgstr "Установить RDS AI Engine"
+
+#: rds-ai-excerpt-generator.php:99
+msgid "No AI model selected. Please select a model in "
+msgstr "Модель ИИ не выбрана. Пожалуйста, выберите модель в "
+
+#: rds-ai-excerpt-generator.php:101
+msgid "plugin settings"
+msgstr "настройках плагина"
+
+#: rds-ai-excerpt-generator.php:175
+msgid "PHP version 7.4 or higher is required. You are running version %s."
+msgstr "Требуется PHP версии 7.4 или выше. У вас установлена версия %s."
+
+#: rds-ai-excerpt-generator.php:183
+msgid "WordPress version 6.0 or higher is required. You are running version %s."
+msgstr "Требуется WordPress версии 6.0 или выше. У вас установлена версия %s."
+
+#: rds-ai-excerpt-generator.php:187
+msgid "RDS AI Engine plugin is required. Please install and activate it first."
+msgstr "Требуется плагин RDS AI Engine. Пожалуйста, сначала установите и активируйте его."
+
+#: rds-ai-excerpt-generator.php:201
+msgid "-- Select Model --"
+msgstr "-- Выберите модель --"
+
+#: rds-ai-excerpt-generator.php:216
+msgid "No model selected"
+msgstr "Модель не выбрана"
+
+#: includes/class-activator.php:22
+msgid "Plugin Activation Error"
+msgstr "Ошибка активации плагина"
+
+#: includes/class-activator.php:24
+msgid "RDS AI Excerpt Generator cannot be activated:"
+msgstr "RDS AI Генератор Отрывков не может быть активирован:"
+
+#: includes/class-activator.php:28
+msgid "Return to plugins page"
+msgstr "Вернуться на страницу плагинов"
+
+#: includes/class-activator.php:89
+msgid "PHP version 7.4 or higher is required. You are running version %s."
+msgstr "Требуется PHP версии 7.4 или выше. У вас установлена версия %s."
+
+#: includes/class-activator.php:97
+msgid "WordPress version 6.0 or higher is required. You are running version %s."
+msgstr "Требуется WordPress версии 6.0 или выше. У вас установлена версия %s."
+
+#: includes/class-activator.php:101
+msgid "RDS AI Engine plugin is required. Please install and activate it first."
+msgstr "Требуется плагин RDS AI Engine. Пожалуйста, сначала установите и активируйте его."
+
+#: includes/class-admin-settings.php:45
+msgid "Settings"
+msgstr "Настройки"
+
+#: includes/class-admin-settings.php:56
+msgid "AI Excerpt Generator Settings"
+msgstr "Настройки AI Генератора Отрывков"
+
+#: includes/class-admin-settings.php:58
+msgid "AI Excerpt"
+msgstr "AI Отрывки"
+
+#: includes/class-admin-settings.php:73
+msgid "AI Excerpt Generator"
+msgstr "AI Генератор Отрывков"
+
+#: includes/class-admin-settings.php:183
+msgid "Settings saved successfully!"
+msgstr "Настройки успешно сохранены!"
+
+#: includes/class-admin-settings.php:189
+msgid "RDS AI Engine Required"
+msgstr "Требуется RDS AI Engine"
+
+#: includes/class-admin-settings.php:191
+msgid "Please install and activate RDS AI Engine plugin first."
+msgstr "Пожалуйста, сначала установите и активируйте плагин RDS AI Engine."
+
+#: includes/class-admin-settings.php:193
+msgid "Install RDS AI Engine"
+msgstr "Установить RDS AI Engine"
+
+#: includes/class-admin-settings.php:207
+msgid "Selected Model:"
+msgstr "Выбранная модель:"
+
+#: includes/class-admin-settings.php:216
+msgid "Test AI Connection"
+msgstr "Тестировать подключение к ИИ"
+
+#: includes/class-admin-settings.php:223
+msgid "Documentation"
+msgstr "Документация"
+
+#: includes/class-admin-settings.php:225
+msgid "Show Prompt Variables"
+msgstr "Показать переменные промпта"
+
+#: includes/class-admin-settings.php:226
+msgid "Reset to Defaults"
+msgstr "Сбросить к значениям по умолчанию"
+
+#: includes/class-admin-settings.php:231
+msgid "System Information"
+msgstr "Системная информация"
+
+#: includes/class-admin-settings.php:236
+msgid "Plugin version:"
+msgstr "Версия плагина:"
+
+#: includes/class-admin-settings.php:240
+msgid "Available AI Models:"
+msgstr "Доступные модели ИИ:"
+
+#: includes/class-admin-settings.php:242
+msgid "No models found"
+msgstr "Модели не найдены"
+
+#: includes/class-admin-settings.php:248
+msgid "Log directory:"
+msgstr "Каталог логов:"
+
+#: includes/class-admin-settings.php:250
+msgid "Not found"
+msgstr "Не найден"
+
+#: includes/class-admin-settings.php:256
+msgid "PHP version:"
+msgstr "Версия PHP:"
+
+#: includes/class-admin-settings.php:260
+msgid "WordPress version:"
+msgstr "Версия WordPress:"
+
+#: includes/class-admin-settings.php:273
+msgid "Available Prompt Variables"
+msgstr "Доступные переменные промпта"
+
+#: includes/class-admin-settings.php:277
+msgid "Important:"
+msgstr "Важно:"
+
+#: includes/class-admin-settings.php:278
+msgid "The <code>{{content}}</code> variable is <strong>REQUIRED</strong>. It will be replaced with the actual post content."
+msgstr "Переменная <code>{{content}}</code> <strong>ОБЯЗАТЕЛЬНА</strong>. Она будет заменена фактическим содержимым поста."
+
+#: includes/class-admin-settings.php:279
+msgid "Other variables are optional."
+msgstr "Остальные переменные необязательны."
+
+#: includes/class-admin-settings.php:284
+msgid "Variable"
+msgstr "Переменная"
+
+#: includes/class-admin-settings.php:285
+msgid "Description"
+msgstr "Описание"
+
+#: includes/class-admin-settings.php:286
+msgid "Required"
+msgstr "Обязательно"
+
+#: includes/class-admin-settings.php:290
+msgid "The post content to summarize"
+msgstr "Содержимое поста для суммирования"
+
+#: includes/class-admin-settings.php:291
+msgid "YES"
+msgstr "ДА"
+
+#: includes/class-admin-settings.php:294
+msgid "The post title"
+msgstr "Заголовок поста"
+
+#: includes/class-admin-settings.php:295
+msgid "No"
+msgstr "Нет"
+
+#: includes/class-admin-settings.php:298
+msgid "Writing style (descriptive, advertising, business, creative)"
+msgstr "Стиль письма (описательный, рекламный, деловой, творческий)"
+
+#: includes/class-admin-settings.php:302
+msgid "Tone (neutral, formal, friendly, professional)"
+msgstr "Тон (нейтральный, формальный, дружелюбный, профессиональный)"
+
+#: includes/class-admin-settings.php:306
+msgid "Language code (en, ru, es, fr, de, etc.)"
+msgstr "Код языка (en, ru, es, fr, de и т.д.)"
+
+#: includes/class-admin-settings.php:310
+msgid "Maximum length in words (e.g., 150)"
+msgstr "Максимальная длина в словах (например, 150)"
+
+#: includes/class-admin-settings.php:314
+msgid "Keywords to focus on (comma-separated)"
+msgstr "Ключевые слова для акцента (через запятую)"
+
+#: includes/class-admin-settings.php:318
+msgid "Example Prompts"
+msgstr "Примеры промптов"
+
+#: includes/class-admin-settings.php:321
+msgid "Basic Example:"
+msgstr "Базовый пример:"
+
+#: includes/class-admin-settings.php:334
+msgid "Detailed Example:"
+msgstr "Подробный пример:"
+
+#: includes/class-admin-settings.php:348
+msgid "Close"
+msgstr "Закрыть"
+
+#: includes/class-admin-settings.php:372
+msgid "Select the AI model to use for excerpt generation."
+msgstr "Выберите модель ИИ для генерации отрывков."
+
+#: includes/class-admin-settings.php:378
+msgid "Set default values for excerpt generation."
+msgstr "Установите значения по умолчанию для генерации отрывков."
+
+#: includes/class-admin-settings.php:384
+msgid "Select which post types should have the AI Excerpt Generator available."
+msgstr "Выберите типы записей, для которых должен быть доступен AI Генератор Отрывков."
+
+#: includes/class-admin-settings.php:390
+msgid "Configure security settings and limits."
+msgstr "Настройте параметры безопасности и ограничения."
+
+#: includes/class-admin-settings.php:396
+msgid "Debug and logging settings."
+msgstr "Настройки отладки и логирования."
+
+#: includes/class-admin-settings.php:409
+msgid "Select AI Model"
+msgstr "Выберите модель ИИ"
+
+#: includes/class-admin-settings.php:431
+msgid "No AI models found. Please check RDS AI Engine plugin configuration."
+msgstr "Модели ИИ не найдены. Пожалуйста, проверьте конфигурацию плагина RDS AI Engine."
+
+#: includes/class-admin-settings.php:435
+msgid "Select an AI model from RDS AI Engine plugin."
+msgstr "Выберите модель ИИ из плагина RDS AI Engine."
+
+#: includes/class-admin-settings.php:445
+msgid "Default Style"
+msgstr "Стиль по умолчанию"
+
+#: includes/class-admin-settings.php:450
+msgid "Descriptive"
+msgstr "Описательный"
+
+#: includes/class-admin-settings.php:451
+msgid "Advertising"
+msgstr "Рекламный"
+
+#: includes/class-admin-settings.php:452
+msgid "Business"
+msgstr "Деловой"
+
+#: includes/class-admin-settings.php:453
+msgid "Creative"
+msgstr "Творческий"
+
+#: includes/class-admin-settings.php:463
+msgid "Default Tone"
+msgstr "Тон по умолчанию"
+
+#: includes/class-admin-settings.php:468
+msgid "Neutral"
+msgstr "Нейтральный"
+
+#: includes/class-admin-settings.php:469
+msgid "Formal"
+msgstr "Формальный"
+
+#: includes/class-admin-settings.php:470
+msgid "Friendly"
+msgstr "Дружелюбный"
+
+#: includes/class-admin-settings.php:471
+msgid "Professional"
+msgstr "Профессиональный"
+
+#: includes/class-admin-settings.php:481
+msgid "Default Language"
+msgstr "Язык по умолчанию"
+
+#: includes/class-admin-settings.php:496
+msgid "Default Max Length (words)"
+msgstr "Макс. длина по умолчанию (слов)"
+
+#: includes/class-admin-settings.php:500
+msgid "Maximum length of generated excerpt in words"
+msgstr "Максимальная длина сгенерированного отрывка в словах"
+
+#: includes/class-admin-settings.php:506
+msgid "Default Focus Keywords"
+msgstr "Ключевые слова по умолчанию"
+
+#: includes/class-admin-settings.php:510
+msgid "Default focus keywords (comma-separated)"
+msgstr "Ключевые слова по умолчанию (через запятую)"
+
+#: includes/class-admin-settings.php:515
+msgid "System Prompt"
+msgstr "Системный промпт"
+
+#: includes/class-admin-settings.php:567
+msgid "Enter your system prompt here..."
+msgstr "Введите ваш системный промпт здесь..."
+
+#: includes/class-admin-settings.php:570
+msgid "Prompt Variables"
+msgstr "Переменные промпта"
+
+#: includes/class-admin-settings.php:578
+msgid "REQUIRED"
+msgstr "ОБЯЗАТЕЛЬНО"
+
+#: includes/class-admin-settings.php:579
+msgid "The post content to summarize"
+msgstr "Содержимое поста для суммирования"
+
+#: includes/class-admin-settings.php:583
+msgid "The post title"
+msgstr "Заголовок поста"
+
+#: includes/class-admin-settings.php:587
+msgid "Writing style (descriptive, advertising, etc.)"
+msgstr "Стиль письма (описательный, рекламный и т.д.)"
+
+#: includes/class-admin-settings.php:591
+msgid "Tone (neutral, formal, friendly, etc.)"
+msgstr "Тон (нейтральный, формальный, дружелюбный и т.д.)"
+
+#: includes/class-admin-settings.php:595
+msgid "Language code (en, ru, es, etc.)"
+msgstr "Код языка (en, ru, es и т.д.)"
+
+#: includes/class-admin-settings.php:599
+msgid "Maximum length in words"
+msgstr "Максимальная длина в словах"
+
+#: includes/class-admin-settings.php:603
+msgid "Keywords to focus on"
+msgstr "Ключевые слова для акцента"
+
+#: includes/class-admin-settings.php:609
+msgid "Important:"
+msgstr "Важно:"
+
+#: includes/class-admin-settings.php:610
+msgid "You must include <code>{{content}}</code> variable in your prompt where you want the post content to appear."
+msgstr "Вы должны включить переменную <code>{{content}}</code> в ваш промпт там, где должно появиться содержимое поста."
+
+#: includes/class-admin-settings.php:611
+msgid "The content will NOT be added automatically."
+msgstr "Содержимое НЕ будет добавлено автоматически."
+
+#: includes/class-admin-settings.php:617
+msgid "Enabled Post Types"
+msgstr "Разрешенные типы записей"
+
+#: includes/class-admin-settings.php:623
+msgid "Select post types where AI Excerpt Generator should be available."
+msgstr "Выберите типы записей, для которых должен быть доступен AI Генератор Отрывков."
+
+#: includes/class-admin-settings.php:629
+msgid "Max Content Length (characters)"
+msgstr "Макс. длина содержимого (символов)"
+
+#: includes/class-admin-settings.php:633
+msgid "Maximum characters to send to AI (to manage token usage)"
+msgstr "Максимальное количество символов для отправки ИИ (для управления использованием токенов)"
+
+#: includes/class-admin-settings.php:639
+msgid "Allowed User Roles"
+msgstr "Разрешенные роли пользователей"
+
+#: includes/class-admin-settings.php:643
+msgid "User roles allowed to use the AI Excerpt Generator"
+msgstr "Роли пользователей, которым разрешено использовать AI Генератор Отрывков"
+
+#: includes/class-admin-settings.php:649
+msgid "Enable Debug Logging"
+msgstr "Включить логирование отладки"
+
+#: includes/class-admin-settings.php:653
+msgid "Enable debug logging to file"
+msgstr "Включить логирование отладки в файл"
+
+#: includes/class-admin-settings.php:656
+msgid "Logs are saved to: %s"
+msgstr "Логи сохраняются в: %s"
+
+#: includes/class-ajax-handler.php:25
+msgid "Security check failed."
+msgstr "Проверка безопасности не пройдена."
+
+#: includes/class-ajax-handler.php:30
+msgid "Insufficient permissions."
+msgstr "Недостаточно прав."
+
+#: includes/class-ajax-handler.php:35
+msgid "Invalid post ID."
+msgstr "Неверный ID записи."
+
+#: includes/class-ajax-handler.php:61
+msgid "Post not found."
+msgstr "Запись не найдена."
+
+#: includes/class-ajax-handler.php:117
+msgid "Security check failed."
+msgstr "Проверка безопасности не пройдена."
+
+#: includes/class-ajax-handler.php:122
+msgid "Insufficient permissions."
+msgstr "Недостаточно прав."
+
+#: includes/class-ajax-handler.php:127
+msgid "No model selected."
+msgstr "Модель не выбрана."
+
+#: includes/class-ajax-handler.php:146
+msgid "AI connection successful!"
+msgstr "Подключение к ИИ успешно!"
+
+#: includes/class-editor-integration.php:80
+msgid "AI Excerpt Generator"
+msgstr "AI Генератор Отрывков"
+
+#: includes/class-engine-integration.php:108
+msgid "RDS AI Engine is not available. Please install and activate the RDS AI Engine plugin."
+msgstr "RDS AI Engine недоступен. Пожалуйста, установите и активируйте плагин RDS AI Engine."
+
+#: includes/class-engine-integration.php:116
+msgid "No AI model selected. Please select a model in plugin settings."
+msgstr "Модель ИИ не выбрана. Пожалуйста, выберите модель в настройках плагина."
+
+#: includes/class-engine-integration.php:126
+msgid "The {{content}} variable is missing from your system prompt. Please include it to send the post content to AI."
+msgstr "В вашем системном промпте отсутствует переменная {{content}}. Пожалуйста, включите ее для отправки содержимого поста ИИ."
+
+#: includes/class-engine-integration.php:157
+msgid "AI Engine chat method not found."
+msgstr "Метод чата AI Engine не найден."
+
+#: includes/class-engine-integration.php:208
+msgid "RDS AI Engine is not available."
+msgstr "RDS AI Engine недоступен."
+
+#: includes/class-engine-integration.php:216
+msgid "No model selected for testing."
+msgstr "Модель для тестирования не выбрана."
+
+#: includes/class-engine-integration.php:235
+msgid "AI Engine chat method not found."
+msgstr "Метод чата AI Engine не найден."
+
+#: includes/class-engine-integration.php:243
+msgid "Received empty response from AI Engine."
+msgstr "Получен пустой ответ от AI Engine."
+
+#: includes/class-engine-integration.php:252
+msgid "Connection test failed: %s"
+msgstr "Тест подключения не удался: %s"
+
+#: includes/class-engine-integration.php:312
+msgid "Unknown Model"
+msgstr "Неизвестная модель"
+
+#: includes/class-engine-integration.php:317
+msgid "Invalid Model"
+msgstr "Неверная модель"
+
+#: includes/class-engine-integration.php:349
+msgid "Model not found"
+msgstr "Модель не найдена"
+
+#: assets/js/classic-editor.js
+msgid "Generating excerpt..."
+msgstr "Генерация отрывка..."
+
+msgid "Excerpt generated successfully!"
+msgstr "Отрывок успешно сгенерирован!"
+
+msgid "Excerpt applied successfully!"
+msgstr "Отрывок успешно применен!"
+
+msgid "Copied to clipboard!"
+msgstr "Скопировано в буфер обмена!"
+
+msgid "Error:"
+msgstr "Ошибка:"
+
+msgid "Style:"
+msgstr "Стиль:"
+
+msgid "Tone:"
+msgstr "Тон:"
+
+msgid "Language:"
+msgstr "Язык:"
+
+msgid "Max Length (words):"
+msgstr "Макс. длина (слов):"
+
+msgid "Focus Keywords (comma-separated):"
+msgstr "Ключевые слова (через запятую):"
+
+msgid "Generate Excerpt"
+msgstr "Сгенерировать отрывок"
+
+msgid "Generated Excerpt:"
+msgstr "Сгенерированный отрывок:"
+
+msgid "Apply to Excerpt"
+msgstr "Применить к отрывку"
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Descriptive"
+msgstr "Описательный"
+
+msgid "Advertising"
+msgstr "Рекламный"
+
+msgid "Business"
+msgstr "Деловой"
+
+msgid "Creative"
+msgstr "Творческий"
+
+msgid "Neutral"
+msgstr "Нейтральный"
+
+msgid "Formal"
+msgstr "Формальный"
+
+msgid "Friendly"
+msgstr "Дружелюбный"
+
+msgid "Professional"
+msgstr "Профессиональный"
+
+#: assets/js/editor-widget.js
+msgid "AI Excerpt Generator"
+msgstr "AI Генератор Отрывков"
+
+msgid "Generate Excerpt"
+msgstr "Сгенерировать отрывок"
+
+msgid "Generating excerpt..."
+msgstr "Генерация отрывка..."
+
+msgid "Apply to Excerpt"
+msgstr "Применить к отрывку"
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Style:"
+msgstr "Стиль:"
+
+msgid "Tone:"
+msgstr "Тон:"
+
+msgid "Language:"
+msgstr "Язык:"
+
+msgid "Max Length (words):"
+msgstr "Макс. длина (слов):"
+
+msgid "Focus Keywords:"
+msgstr "Ключевые слова:"
+
+msgid "Generated Excerpt:"
+msgstr "Сгенерированный отрывок:"
+
+msgid "Excerpt generated successfully!"
+msgstr "Отрывок успешно сгенерирован!"
+
+msgid "Excerpt applied successfully!"
+msgstr "Отрывок успешно применен!"
+
+msgid "Copied to clipboard!"
+msgstr "Скопировано в буфер обмена!"
+
+msgid "Error:"
+msgstr "Ошибка:"
+
+msgid "Descriptive"
+msgstr "Описательный"
+
+msgid "Advertising"
+msgstr "Рекламный"
+
+msgid "Business"
+msgstr "Деловой"
+
+msgid "Creative"
+msgstr "Творческий"
+
+msgid "Neutral"
+msgstr "Нейтральный"
+
+msgid "Formal"
+msgstr "Формальный"
+
+msgid "Friendly"
+msgstr "Дружелюбный"
+
+msgid "Professional"
+msgstr "Профессиональный"
+
+msgid "Current Excerpt:"
+msgstr "Текущий отрывок:"
+
+msgid "No excerpt to apply."
+msgstr "Нет отрывка для применения."
+
+msgid "Failed to apply excerpt to post."
+msgstr "Не удалось применить отрывок к записи."
+
+msgid "No excerpt to copy."
+msgstr "Нет отрывка для копирования."
+
+msgid "Failed to copy to clipboard."
+msgstr "Не удалось скопировать в буфер обмена."
+
+msgid "Unknown error occurred."
+msgstr "Произошла неизвестная ошибка."
+
+msgid "Failed to generate excerpt. Please try again."
+msgstr "Не удалось сгенерировать отрывок. Пожалуйста, попробуйте снова."
+
+#: assets/js/admin-settings.js
+msgid "Testing..."
+msgstr "Тестирование..."
+
+msgid "Connection successful!"
+msgstr "Подключение успешно!"
+
+msgid "Connection failed."
+msgstr "Подключение не удалось."
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Please select a model first."
+msgstr "Пожалуйста, сначала выберите модель."
+
+msgid "Are you sure you want to reset all settings to defaults?"
+msgstr "Вы уверены, что хотите сбросить все настройки к значениям по умолчанию?"
+
+msgid "Settings reset successfully."
+msgstr "Настройки успешно сброшены."

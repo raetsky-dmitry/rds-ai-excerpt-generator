@@ -9,37 +9,81 @@
    * Main Widget Class
    */
   function RDSAIExcerptWidget() {
+    var self = this; // Сохраняем контекст
+
+    /**
+     * Check if we're in Gutenberg editor
+     */
+    this.isGutenbergEditor = function () {
+      // Способ 1: Проверяем по классам body
+      if ($("body").hasClass("block-editor-page")) {
+        return true;
+      }
+
+      // Способ 2: Проверяем по наличию Gutenberg элементов
+      if (
+        $(".edit-post-layout").length > 0 ||
+        $(".block-editor").length > 0 ||
+        $("#editor").hasClass("block-editor__container")
+      ) {
+        return true;
+      }
+
+      // Способ 3: Проверяем по window.wp
+      if (
+        typeof window.wp !== "undefined" &&
+        window.wp.data &&
+        window.wp.data.select("core/editor")
+      ) {
+        return true;
+      }
+
+      // Способ 4: По локализованным данным
+      if (window.rdsAIExcerptWidget && window.rdsAIExcerptWidget.isGutenberg) {
+        return true;
+      }
+
+      return false;
+    };
+
+    /**
+     * Initialize widget for Classic Editor
+     */
     this.initClassicWidget = function () {
-      console.log("Initializing RDS AI Excerpt Widget...");
+      console.log("Initializing RDS AI Excerpt Widget for Classic Editor...");
+
+      // Проверяем, не в Gutenberg ли мы
+      if (this.isGutenbergEditor()) {
+        console.log("Detected Gutenberg editor, disabling Classic widget");
+        return;
+      }
+
       this.bindEvents();
-      this.hideExcerptFieldIfEmpty();
-    }.bind(this);
+    };
 
     /**
      * Bind event handlers
      */
     this.bindEvents = function () {
-      const self = this;
-
       // Generate button
       $("#rds-ai-excerpt-generate").on("click", function (e) {
         e.preventDefault();
-        console.log("Generate button clicked");
-        self.generateExcerpt();
+        console.log("Generate button clicked in Classic Editor");
+        self.generateExcerpt(); // Используем self вместо this
       });
 
       // Apply button
       $("#rds-ai-excerpt-apply").on("click", function (e) {
         e.preventDefault();
-        console.log("Apply button clicked");
-        self.applyExcerpt();
+        console.log("Apply button clicked in Classic Editor");
+        self.applyExcerpt(); // Используем self вместо this
       });
 
       // Copy button
       $("#rds-ai-excerpt-copy").on("click", function (e) {
         e.preventDefault();
-        console.log("Copy button clicked");
-        self.copyExcerpt();
+        console.log("Copy button clicked in Classic Editor");
+        self.copyExcerpt(); // Используем self вместо this
       });
 
       // Parameter changes
@@ -48,14 +92,12 @@
       ).on("change", function () {
         self.hideResult();
       });
-    }.bind(this);
+    };
 
     /**
      * Generate excerpt
      */
     this.generateExcerpt = function () {
-      const self = this;
-
       // Get widget data from localized object or fallback
       const widgetData = window.rdsAIExcerptWidget || {
         ajaxUrl: ajaxurl,
@@ -65,7 +107,7 @@
 
       const postId = widgetData.postId || $("#post_ID").val();
 
-      console.log("Generating excerpt for post:", postId);
+      console.log("Generating excerpt for post (Classic):", postId);
 
       // Get parameters
       const params = {
@@ -76,7 +118,7 @@
         focus_keywords: $("#rds-ai-excerpt-focus-keywords").val(),
       };
 
-      console.log("Parameters:", params);
+      console.log("Parameters (Classic):", params);
 
       // Validate
       if (!params.max_length || params.max_length < 50) {
@@ -101,7 +143,7 @@
           ...params,
         },
         success: function (response) {
-          console.log("API Response:", response);
+          console.log("API Response (Classic):", response);
           self.hideLoading();
 
           if (response.success) {
@@ -111,14 +153,14 @@
           }
         },
         error: function (xhr, status, error) {
-          console.error("API Error:", xhr, status, error);
+          console.error("API Error (Classic):", xhr, status, error);
           self.hideLoading();
           self.showError(
             "Failed to generate excerpt. Please try again. Error: " + error
           );
         },
       });
-    }.bind(this);
+    };
 
     /**
      * Apply excerpt to post
@@ -130,7 +172,7 @@
         return;
       }
 
-      console.log("Applying excerpt:", excerpt);
+      console.log("Applying excerpt (Classic):", excerpt);
 
       // Find excerpt field
       let excerptField = $("#excerpt");
@@ -148,7 +190,7 @@
       } else {
         this.showError("Could not find excerpt field.");
       }
-    }.bind(this);
+    };
 
     /**
      * Copy excerpt to clipboard
@@ -175,7 +217,7 @@
       } catch (err) {
         this.showError("Failed to copy to clipboard.");
       }
-    }.bind(this);
+    };
 
     /**
      * Show loading indicator
@@ -188,7 +230,7 @@
           '<p><span class="spinner is-active" style="float:none;margin:0 8px 0 0"></span>Generating excerpt...</p>'
         );
       $("#rds-ai-excerpt-generate").prop("disabled", true);
-    }.bind(this);
+    };
 
     /**
      * Hide loading indicator
@@ -197,7 +239,7 @@
       console.log("Hiding loading...");
       $(".rds-ai-excerpt-loading").hide();
       $("#rds-ai-excerpt-generate").prop("disabled", false);
-    }.bind(this);
+    };
 
     /**
      * Show error message
@@ -206,14 +248,14 @@
       console.log("Showing error:", message);
       $(".rds-ai-excerpt-error .error-message").text(message);
       $(".rds-ai-excerpt-error").show();
-    }.bind(this);
+    };
 
     /**
      * Hide error message
      */
     this.hideError = function () {
       $(".rds-ai-excerpt-error").hide();
-    }.bind(this);
+    };
 
     /**
      * Show result
@@ -230,14 +272,14 @@
         },
         500
       );
-    }.bind(this);
+    };
 
     /**
      * Hide result
      */
     this.hideResult = function () {
       $(".rds-ai-excerpt-result").hide();
-    }.bind(this);
+    };
 
     /**
      * Show temporary message
@@ -267,18 +309,7 @@
       notice.on("click", ".notice-dismiss", function () {
         $(this).parent().remove();
       });
-    }.bind(this);
-
-    /**
-     * Hide excerpt field if empty (for better UX)
-     */
-    this.hideExcerptFieldIfEmpty = function () {
-      // This is just a helper function, not essential
-      const excerptField = $("#excerpt");
-      if (excerptField.length && !excerptField.val().trim()) {
-        // Optional: you could hide or collapse the excerpt metabox here
-      }
-    }.bind(this);
+    };
 
     /**
      * Set default values from settings
@@ -290,25 +321,29 @@
       $("#rds-ai-excerpt-tone").val(defaults.tone || "neutral");
       $("#rds-ai-excerpt-language").val(defaults.language || "en");
       $("#rds-ai-excerpt-max-length").val(defaults.maxLength || 150);
-    }.bind(this);
+      $("#rds-ai-excerpt-focus-keywords").val(defaults.focusKeywords || "");
+    };
   }
 
   // Initialize when document is ready
   $(document).ready(function () {
-    console.log("Document ready, initializing widget...");
+    console.log("Document ready, checking editor type...");
+
+    // Проверяем метабокс существует ли
+    if ($("#rds-ai-excerpt-generator").length === 0) {
+      console.log("RDS AI Excerpt meta box not found, skipping initialization");
+      return;
+    }
 
     // Create widget instance
-    window.rdsAIExcerptWidgetInstance = new RDSAIExcerptWidget();
-
-    // Get localized data if available
-    const widgetData = window.rdsAIExcerptWidget || {};
+    var widgetInstance = new RDSAIExcerptWidget();
 
     // Set default values
-    if (widgetData.defaults) {
-      window.rdsAIExcerptWidgetInstance.setDefaults(widgetData.defaults);
+    if (window.rdsAIExcerptWidget && window.rdsAIExcerptWidget.defaults) {
+      widgetInstance.setDefaults(window.rdsAIExcerptWidget.defaults);
     }
 
     // Initialize widget
-    window.rdsAIExcerptWidgetInstance.initClassicWidget();
+    widgetInstance.initClassicWidget();
   });
 })(jQuery);

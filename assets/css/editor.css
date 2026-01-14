@@ -204,3 +204,9 @@
   display: flex;
   align-items: center;
 }
+
+/* Hide classic meta box in Gutenberg editor */
+.block-editor-page #rds-ai-excerpt-generator,
+.edit-post-layout #rds-ai-excerpt-generator {
+  display: none !important;
+}

@@ -30,8 +30,29 @@ class RDS_AI_Excerpt_Asset_Loader
 			return;
 		}
 
-		// Check if we should load for current post type
+		// Check if we're using Gutenberg - более надежная проверка
 		$screen = get_current_screen();
+		if (!$screen) {
+			return;
+		}
+
+		// Метод 1: Современный способ
+		if (method_exists($screen, 'is_block_editor') && $screen->is_block_editor()) {
+			return; // Не загружаем для Gutenberg
+		}
+
+		// Метод 2: Проверка по классам body (fallback)
+		add_action('admin_footer', function () {
+			echo '<script>
+        if (document.body.classList.contains("block-editor-page") || 
+            document.querySelector(".edit-post-layout")) {
+            // Скрываем метабокс если вдруг загрузился
+            document.getElementById("rds-ai-excerpt-generator")?.remove();
+        }
+        </script>';
+		});
+
+		// Проверяем остальные условия...
 		if (!$screen || !$screen->post_type) {
 			return;
 		}
@@ -78,11 +99,12 @@ class RDS_AI_Excerpt_Asset_Loader
 			true
 		);
 
-		// Localize script
+		// Localize script ТОЛЬКО для классического редактора
 		wp_localize_script('rds-ai-excerpt-classic-editor', 'rdsAIExcerptWidget', array(
 			'ajaxUrl' => admin_url('admin-ajax.php'),
 			'nonce'   => wp_create_nonce('rds_ai_excerpt_nonce'),
 			'postId'  => $post_id,
+			'isGutenberg' => false, // Явно указываем, что это не Gutenberg
 			'defaults' => array(
 				'style'      => rds_ai_excerpt_get_option('default_style', 'descriptive'),
 				'tone'       => rds_ai_excerpt_get_option('default_tone', 'neutral'),

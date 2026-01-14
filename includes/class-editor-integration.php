@@ -21,11 +21,31 @@ class RDS_AI_Excerpt_Editor_Integration
 		// Check if we should load for current post type
 		add_action('current_screen', array($this, 'check_current_screen'));
 
-		// Add meta box for classic editor
+		// Add meta box for classic editor (ТОЛЬКО если не Gutenberg)
 		add_action('add_meta_boxes', array($this, 'add_classic_meta_box'));
+
+		// Hide meta box in Gutenberg
+		add_action('admin_head', array($this, 'hide_meta_box_in_gutenberg'));
 
 		// Register Gutenberg plugin
 		add_action('enqueue_block_editor_assets', array($this, 'enqueue_gutenberg_assets'));
+	}
+
+	/**
+	 * Hide classic meta box in Gutenberg
+	 */
+	public function hide_meta_box_in_gutenberg()
+	{
+		$screen = get_current_screen();
+
+		// Проверяем, используем ли мы Gutenberg блоковый редактор
+		if ($screen && method_exists($screen, 'is_block_editor') && $screen->is_block_editor()) {
+			echo '<style>
+            #rds-ai-excerpt-generator {
+                display: none !important;
+            }
+        </style>';
+		}
 	}
 
 	/**
@@ -192,29 +212,31 @@ class RDS_AI_Excerpt_Editor_Integration
 			return;
 		}
 
+		// Для Gutenberg - загружаем только Gutenberg виджет
 		wp_enqueue_script(
 			'rds-ai-excerpt-gutenberg',
 			RDS_AI_EXCERPT_PLUGIN_URL . 'assets/js/editor-widget.js',
-			array('wp-plugins', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data', 'wp-i18n'),
+			array(
+				'wp-plugins',
+				'wp-edit-post',
+				'wp-element',
+				'wp-components',
+				'wp-data',
+				'wp-i18n',
+				'wp-api-fetch',
+			),
 			RDS_AI_EXCERPT_VERSION
 		);
 
-		wp_enqueue_style(
-			'rds-ai-excerpt-editor',
-			RDS_AI_EXCERPT_PLUGIN_URL . 'assets/css/editor.css',
-			array(),
-			RDS_AI_EXCERPT_VERSION
-		);
-
-		// Get current post ID
+		// Localize script только для Gutenberg
 		global $post;
 		$post_id = $post->ID ?? 0;
 
-		// Localize script
 		wp_localize_script('rds-ai-excerpt-gutenberg', 'rdsAIExcerptWidget', array(
 			'ajaxUrl' => admin_url('admin-ajax.php'),
 			'nonce'   => wp_create_nonce('rds_ai_excerpt_nonce'),
 			'postId'  => $post_id,
+			'isGutenberg' => true, // Добавляем флаг для Gutenberg
 			'defaults' => array(
 				'style'      => rds_ai_excerpt_get_option('default_style', 'descriptive'),
 				'tone'       => rds_ai_excerpt_get_option('default_tone', 'neutral'),
